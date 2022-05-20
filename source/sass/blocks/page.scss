@@ -1,0 +1,43 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+
+  &--without-scroll {
+    overflow: hidden;
+  }
+}
+
+.page__body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  color: $blue-text;
+  background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  justify-content: flex-start;
+}
+
+.page__body ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.page__body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page__body *::before,
+.page__body *::after {
+  display: block;
+  box-sizing: border-box;
+}

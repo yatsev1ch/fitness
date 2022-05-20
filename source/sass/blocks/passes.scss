@@ -1,0 +1,382 @@
+.passes {
+  background-color: $gray-passes;
+  position: relative;
+  margin-bottom: 120px;
+
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-bottom: 70px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -151px;
+    right: 0;
+    background-image: url("/img/backgrounds/passes-weights-dsk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 288px;
+    height: 495px;
+
+    @media (min-width: $tbl-breakpoint) and (min-resolution: 2dppx) {
+      background-image: url("/img/backgrounds/passes-weights-dsk@2x.png");
+    }
+
+    @media (max-width: $tbl-breakpoint) {
+      bottom: -128px;
+      right: 0;
+      width: 349px;
+      height: 450px;
+      background-image: url("/img/backgrounds/passes-weights-tbl.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/backgrounds/passes-weights-tbl@2x.png");
+      }
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.passes__wrapper {
+  max-width: $dsk-wrapper-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 116px 0 104px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: 97px 0 84px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 67px 0 54px;
+  }
+}
+
+.passes__header {
+  font-family: $bebas;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.8px;
+
+  margin-top: 0;
+  margin-bottom: 38px;
+
+  @media (max-width: $tbl-breakpoint) {
+    font-size: 42px;
+    margin-bottom: 31px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 32px;
+    margin-bottom: 24px;
+    letter-spacing: 1.4px;
+  }
+}
+
+.passes__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  border-bottom: 2px solid $gray-scale;
+  margin-bottom: 22px;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-bottom: 18px;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.passes__toggle {
+  display: block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  text-decoration: none;
+  color: $blue-text;
+  margin-right: 46px;
+  padding-bottom: 10px;
+  user-select: none;
+
+  @media (max-width: $tbl-breakpoint) {
+    font-size: 18px;
+    margin-right: 54px;
+    padding-bottom: 12px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 16px;
+    margin-right: 45px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &--active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $pink-active;
+    width: 100%;
+    bottom: -2px;
+    left: -1px;
+
+    @media (max-width: $tbl-breakpoint) {
+      width: calc(100% + 1px);
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      width: calc(100% + 7px);
+    }
+  }
+}
+
+.passes__passes-list {
+  display: grid;
+  align-self: stretch;
+  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: $tbl-breakpoint) {
+    grid-template-columns: repeat(auto-fit, 442px);
+    justify-content: space-around;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+.passes span {
+  display: block;
+  position: relative;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $blue-price;
+  text-align: center;
+  z-index: 0;
+  margin: 0;
+  margin-bottom: 33px;
+  word-wrap: break-word;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 48px;
+    margin-bottom: 28px;
+    margin-left: 3px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 42px;
+    width: 30px;
+    background-image: url("/img/svg/rouble.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -8px;
+
+    @media (max-width: $tbl-breakpoint) {
+      margin-top: -11px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      height: 33px;
+      width: 24px;
+      margin-top: -8px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    color: $gray-shadow;
+    word-wrap: break-word;
+    font-size: 100px;
+    line-height: 100%;
+    font-weight: 700;
+    top: -28px;
+    left: 7px;
+    right: 0;
+    z-index: -1;
+    max-width: 95%;
+    text-align: center;
+
+    @media (max-width: $tbl-breakpoint) {
+      left: 10px;
+      top: -29px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      font-size: 80px;
+      left: 5px;
+      top: -21px;
+    }
+  }
+}
+
+.passes__pass {
+  box-sizing: border-box;
+  background-color: $white;
+  padding: 58px 10px 10px;
+  letter-spacing: 0;
+  min-height: 448px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tbl-breakpoint) {
+    width: 100%;
+    max-width: 100%;
+    padding: 62px 10px 10px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 51px 10px 10px;
+    min-height: 384px;
+    max-width: 442px;
+    justify-self: center;
+  }
+
+  &:hover,
+  &:focus-within {
+    padding-top: 51px;
+    border-style: solid;
+    border-width: 7px;
+    border-image: linear-gradient(-52deg, $blue-gradient, $pink-active) 1;
+
+    @media (max-width: $tbl-breakpoint) {
+      padding-top: 56px;
+      border-image: linear-gradient(-35deg, $blue-gradient, $pink-active) 1;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      padding-top: 44px;
+    }
+  }
+
+  &:hover span,
+  &:focus-within span {
+    margin-bottom: 34px;
+
+    @media (max-width: $mbl-breakpoint) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &:hover p,
+  &:focus-within p {
+    @media (max-width: $tbl-breakpoint) {
+      margin-bottom: 65px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      margin-bottom: 57px;
+    }
+  }
+
+  &:hover .passes__button,
+  &:focus-within .passes__button {
+    border: none;
+    padding: 26px 44px;
+    color: $white;
+    background-image: linear-gradient(100deg, $pink-promo 15%, $blue-pass);
+  }
+}
+
+.passes__name {
+  font-size: 26px;
+  line-height: 152%;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+  letter-spacing: 0.1px;
+  text-align: center;
+
+  @media (max-width: $tbl-breakpoint) {
+    font-size: 26px;
+    line-height: 110%;
+    letter-spacing: 0;
+    margin-bottom: 11px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 22px;
+    letter-spacing: 0;
+    margin-bottom: 9px;
+  }
+}
+
+.passes p {
+  margin-top: 0;
+  margin-bottom: 65px;
+  letter-spacing: 0.2px;
+  text-align: center;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 67px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-bottom: 56px;
+  }
+}
+
+.passes__button {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: $blue-text;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  border: 2px solid $blue-text;
+  padding: 25px 43px;
+  align-self: center;
+  user-select: none;
+}

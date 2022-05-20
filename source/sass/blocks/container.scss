@@ -1,0 +1,9 @@
+.container {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 $tbl-container-padding;
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 0 $mbl-container-padding;
+  }
+}

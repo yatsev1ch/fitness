@@ -1,0 +1,10 @@
+.hoverable {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

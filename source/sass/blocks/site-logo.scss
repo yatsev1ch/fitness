@@ -1,0 +1,13 @@
+.site-logo {
+  display: block;
+
+  @media (max-width: $tbl-breakpoint) {
+    width: 82px;
+    height: 18px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    width: 67px;
+    height: 16px;
+  }
+}

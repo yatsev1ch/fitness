@@ -1,0 +1,288 @@
+.trainers__wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 60px 0 65px;
+
+  max-width: $dsk-wrapper-width + 116px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: 41px 0 57px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 11px 0 25px;
+  }
+}
+
+.trainers__header {
+  box-sizing: border-box;
+
+  font-family: $bebas;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 2.23px;
+
+  margin: 0;
+  padding-left: 58px;
+
+  grid-column: 1 / -1;
+
+  @media (max-width: $tbl-breakpoint) {
+    font-size: 42px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 32px;
+    letter-spacing: 1.3px;
+  }
+}
+
+.trainers__button {
+  color: transparent;
+  border: none;
+  background-color: transparent;
+  width: 18px;
+  height: 36px;
+  background-image: url("/img/svg/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+  cursor: pointer;
+
+  @media (max-width: $mbl-breakpoint) {
+    width: 12px;
+    height: 19px;
+  }
+
+  &--prev {
+    justify-self: start;
+    margin: 2px 39px 0 1px;
+    grid-column: 1;
+
+    @media (max-width: $tbl-breakpoint) {
+      margin: 4px 39px 0 -1px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      margin: 1px 21px 0 -1px;
+    }
+  }
+
+  &--next {
+    margin: -2px 1px 0 38px;
+    transform: rotate(180deg);
+    grid-column: 3;
+    justify-self: end;
+
+    @media (max-width: $tbl-breakpoint) {
+      margin: 0 -1px 0 39px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      margin: 0 -1px 0 21px;
+    }
+  }
+}
+
+.trainers__trainers-list {
+  box-sizing: border-box;
+  padding: 38px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22.4%, 1fr));
+  grid-auto-columns: minmax(22.4%, 1fr);
+  gap: 3.43%;
+
+  scrollbar-width: none;
+  overflow-x: hidden;
+
+  @media (max-width: $tbl-breakpoint) {
+    grid-template-columns: repeat(auto-fill, minmax(47.36%, 1fr));
+    grid-auto-columns: minmax(47.36%, 1fr);
+    gap: 5.3%;
+    padding: 27px 0;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-auto-columns: minmax(100%, 1fr);
+    gap: 5px;
+    padding: 29px 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.trainers__trainer {
+  position: relative;
+  box-sizing: border-box;
+  grid-row: 1;
+
+  @media (max-width: $mbl-breakpoint) {
+    min-height: 274px;
+  }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $trainer-shadow;
+  }
+
+  &--on-swiping:hover,
+  &--on-swiping:focus-within {
+    box-shadow: none;
+  }
+
+  &:hover .trainers__trainer-wrapper,
+  &:focus-within .trainers__trainer-wrapper {
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: unset;
+    background-color: $blue-text-80;
+    padding: 51px 46px 15px;
+
+    @media (max-width: $mbl-breakpoint) {
+      padding: 41px 25px 15px;
+    }
+  }
+
+  &--on-swiping:hover div.trainers__trainer-wrapper,
+  &--on-swiping:focus-within div.trainers__trainer-wrapper {
+    top: unset;
+    height: auto;
+    background-color: transparent;
+    padding: 23px;
+
+    @media (max-width: $tbl-breakpoint) {
+      left: 15px;
+      padding: 23px;
+    }
+  }
+
+  &:hover p,
+  &:focus-within p {
+    display: block;
+  }
+
+  &--on-swiping:hover p,
+  &--on-swiping:focus-within p {
+    display: none;
+  }
+
+  &:hover .trainers__trainer-properties,
+  &:focus-within .trainers__trainer-properties {
+    display: block;
+  }
+
+  &--on-swiping:hover .trainers__trainer-properties,
+  &--on-swiping:focus-within .trainers__trainer-properties {
+    display: none;
+  }
+}
+
+.trainers__trainer-wrapper {
+  position: absolute;
+  box-sizing: border-box;
+  overflow-y: auto;
+  bottom: 0;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 23px;
+
+  @media (max-width: $tbl-breakpoint) {
+    left: 15px;
+  }
+}
+
+.trainers__image {
+  width: 100%;
+}
+
+.trainers__image img {
+  width: 100%;
+}
+
+.trainers__trainer-header {
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 700;
+  color: $white;
+  margin: 0;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-right: 7px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-right: 0;
+  }
+}
+
+.trainers__trainer p {
+  display: none;
+  font-size: 16px;
+  line-height: 110%;
+  font-weight: 400;
+  color: $gray-subtext;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 36px;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-right: 8px;
+    margin-bottom: 37px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}
+
+.trainers__trainer-properties {
+  display: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.trainers__trainer-property {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  padding-left: 26px;
+  letter-spacing: 0.06px;
+  color: $white;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 13px;
+
+  @media (max-width: $mbl-breakpoint) {
+    letter-spacing: 0.06px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
