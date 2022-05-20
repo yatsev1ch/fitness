@@ -119,7 +119,7 @@
   box-sizing: border-box;
   position: relative;
   box-shadow: $trainer-shadow;
-  padding: 59px 62px 57px;
+  padding: 59px 62px 56px;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   background-color: $blue-border;
@@ -133,7 +133,7 @@
 
   @media (max-width: $mbl-breakpoint) {
     grid-template-columns: 1fr 1fr;
-    padding: 40px 25px 31px;
+    padding: 40px 25px 34px;
     column-gap: 8px;
     row-gap: 15px;
   }
@@ -197,7 +197,7 @@
 
   @media (max-width: $mbl-breakpoint) {
     text-align: center;
-    line-height: 141%;
+    line-height: 139%;
     grid-column: 1 / -1;
   }
 }

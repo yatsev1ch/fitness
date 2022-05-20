@@ -18,7 +18,7 @@
 
   margin: 0 auto;
   padding-top: 28px;
-  padding-bottom: 52px;
+  padding-bottom: 51px;
 
   display: grid;
   grid-template-columns: 392px 1fr auto;
@@ -58,8 +58,9 @@
   text-decoration: none;
   text-align: end;
 
-  margin-right: 1px;
+  margin-left: -1px;
   grid-column: -1;
+  justify-self: end;
 
   @media (max-width: $tbl-breakpoint) {
     font-size: 24px;
