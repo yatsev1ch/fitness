@@ -916,6 +916,7 @@
 .trainers__trainer:focus-within {
   -webkit-box-shadow: 0 0 35px #2a3b632b;
   box-shadow: 0 0 35px #2a3b632b;
+  outline: none;
 }
 
 .trainers__trainer--on-swiping:hover,

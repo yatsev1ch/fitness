@@ -133,6 +133,7 @@
   &:hover,
   &:focus-within {
     box-shadow: $trainer-shadow;
+    outline: none;
   }
 
   &--on-swiping:hover,
