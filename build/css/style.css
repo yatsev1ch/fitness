@@ -364,7 +364,7 @@
   grid-column: 1;
 }
 
-.gym p span {
+.gym span {
   display: block;
   margin-top: 8px;
 }
@@ -1922,7 +1922,7 @@
     margin-bottom: 43px;
   }
 
-  .gym p span {
+  .gym span {
     display: none;
   }
 
