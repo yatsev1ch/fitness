@@ -1,0 +1,24 @@
+.slider {
+  & .slider__slide {
+    transition: 0.33s ease-out;
+    transform: translateX(0);
+  }
+
+  &--to-left .slider__slide {
+    transform: translateX(-112%);
+    transition: none;
+
+    @media (max-width: $tbl-breakpoint) {
+      transform: translateX(-105%);
+    }
+  }
+
+  &--to-right .slider__slide {
+    transform: translateX(112%);
+    transition: none;
+
+    @media (max-width: $tbl-breakpoint) {
+      transform: translateX(105%);
+    }
+  }
+}

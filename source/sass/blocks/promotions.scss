@@ -102,7 +102,7 @@
 
     @media (max-width: $mbl-breakpoint) {
       grid-template-columns: 1fr;
-      padding: 42px 0 0 0;
+      padding: 42px 8px 0 8px;
       column-gap: 35px;
       justify-items: center;
     }
@@ -143,6 +143,7 @@
   font-size: 70px;
   line-height: 100%;
   margin-top: 2px;
+  word-wrap: break-word;
 }
 
 .promotions__promotion p {
@@ -193,6 +194,7 @@
   border-bottom: 1px solid $blue-text;
   letter-spacing: 0.6px;
   user-select: none;
+  max-width: 100px;
 
 
   @media (max-width: $mbl-breakpoint) {
@@ -223,7 +225,8 @@
   @media (max-width: $mbl-breakpoint) {
     grid-column: 1;
     grid-row: 5;
-    margin: 0;
+    margin: 0 -8px 0 -8px;
+    width: calc(100% + 16px);
   }
 }
 

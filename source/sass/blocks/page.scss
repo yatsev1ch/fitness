@@ -3,7 +3,8 @@
   scroll-behavior: smooth;
 
   &--without-scroll {
-    overflow: hidden;
+    scroll-behavior: none;
+    overflow: none;
   }
 }
 

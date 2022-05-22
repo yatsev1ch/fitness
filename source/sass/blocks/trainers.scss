@@ -46,6 +46,7 @@
 
 .trainers__button {
   color: transparent;
+  font-size: 0;
   border: none;
   background-color: transparent;
   width: 18px;
@@ -55,6 +56,7 @@
   background-size: contain;
   align-self: center;
   cursor: pointer;
+  outline-offset: 6px;
 
   @media (max-width: $mbl-breakpoint) {
     width: 12px;
@@ -93,6 +95,7 @@
 
 .trainers__trainers-list {
   box-sizing: border-box;
+  position: relative;
   padding: 38px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(22.4%, 1fr));
@@ -130,18 +133,34 @@
     min-height: 274px;
   }
 
-  &:hover,
+  &:hover {
+    @media (hover: hover) {
+      box-shadow: $trainer-shadow;
+      outline: none;
+    }
+  }
+
   &:focus-within {
     box-shadow: $trainer-shadow;
     outline: none;
   }
 
-  &--on-swiping:hover,
-  &--on-swiping:focus-within {
-    box-shadow: none;
+  &:hover .trainers__trainer-wrapper,
+  &:focus-within .trainers__trainer-wrapper {
+    @media (hover: hover) {
+      top: 0;
+      left: 0;
+      height: 100%;
+      max-height: unset;
+      background-color: $blue-text-80;
+      padding: 51px 46px 15px;
+
+      @media (max-width: $mbl-breakpoint) {
+        padding: 41px 25px 15px;
+      }
+    }
   }
 
-  &:hover .trainers__trainer-wrapper,
   &:focus-within .trainers__trainer-wrapper {
     top: 0;
     left: 0;
@@ -155,37 +174,26 @@
     }
   }
 
-  &--on-swiping:hover div.trainers__trainer-wrapper,
-  &--on-swiping:focus-within div.trainers__trainer-wrapper {
-    top: unset;
-    height: auto;
-    background-color: transparent;
-    padding: 23px;
-
-    @media (max-width: $tbl-breakpoint) {
-      left: 15px;
-      padding: 23px;
+  &:hover p,
+  &:focus-within p {
+    @media (hover: hover) {
+      display: block;
     }
   }
 
-  &:hover p,
   &:focus-within p {
     display: block;
   }
 
-  &--on-swiping:hover p,
-  &--on-swiping:focus-within p {
-    display: none;
-  }
-
   &:hover .trainers__trainer-properties,
   &:focus-within .trainers__trainer-properties {
-    display: block;
+    @media (hover: hover) {
+      display: block;
+    }
   }
 
-  &--on-swiping:hover .trainers__trainer-properties,
-  &--on-swiping:focus-within .trainers__trainer-properties {
-    display: none;
+  &:focus-within .trainers__trainer-properties {
+    display: block;
   }
 }
 

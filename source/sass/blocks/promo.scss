@@ -122,6 +122,8 @@
 }
 
 .promo p {
+  box-sizing: border-box;
+  padding-right: 8px;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
@@ -152,6 +154,7 @@
   grid-row: 4;
   justify-self: start;
   margin-left: -2px;
+  margin-right: 8px;
   letter-spacing: 0.8px;
   user-select: none;
 
@@ -172,6 +175,7 @@
 }
 
 .promo__image {
+  min-width: 500px;
   width: 100%;
   grid-column: 3;
   grid-row: 1 / 6;
@@ -179,6 +183,7 @@
 
   @media (max-width: $tbl-breakpoint) {
     margin: -46px 0 -10px;
+    min-width: 100px;
   }
 
   @media (max-width: $mbl-breakpoint) {
