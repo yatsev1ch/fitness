@@ -1,9 +1,9 @@
 .feedback {
-  background-color: $blue-text;
   box-sizing: border-box;
-  padding: 66px 168px 66px 102px;
+  padding: 66px 168px 66px 0;
 
   @media (max-width: $tbl-breakpoint) {
+    background-color: $blue-text;
     padding: 67px 162px 68px 132px;
   }
 

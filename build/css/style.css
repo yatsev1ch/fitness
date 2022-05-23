@@ -3,7 +3,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/bebas-neue.woff2") format("woff2"), url("/fonts/bebas-neue.woff") format("woff");
+  src: url("../fonts/bebas-neue.woff2") format("woff2"), url("../fonts/bebas-neue.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/roboto-condensed.woff2") format("woff2"), url("/fonts/roboto-condensed.woff") format("woff");
+  src: url("../fonts/roboto-condensed.woff2") format("woff2"), url("../fonts/roboto-condensed.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/roboto-condensed-light.woff2") format("woff2"), url("/fonts/roboto-condensed-light.woff") format("woff");
+  src: url("../fonts/roboto-condensed-light.woff2") format("woff2"), url("../fonts/roboto-condensed-light.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/roboto-condensed-bold.woff2") format("woff2"), url("/fonts/roboto-condensed-bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
 .visually-hidden {
@@ -431,7 +431,7 @@
   width: 364px;
   height: 228px;
   align-self: start;
-  background-image: url("/img/backgrounds/gym-video-dsk.jpg");
+  background-image: url("img/backgrounds/gym-video-dsk.jpg");
   background-color: #14367ae3;
   background-repeat: no-repeat;
   background-size: cover;
@@ -458,7 +458,7 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-image: url("/img/svg/video-button.svg");
+  background-image: url("img/svg/video-button.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -484,7 +484,7 @@
   position: absolute;
   bottom: -151px;
   right: 0;
-  background-image: url("/img/backgrounds/passes-weights-dsk.png");
+  background-image: url("img/backgrounds/passes-weights-dsk.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 288px;
@@ -607,7 +607,7 @@
   vertical-align: middle;
   height: 42px;
   width: 30px;
-  background-image: url("/img/svg/rouble.svg");
+  background-image: url("img/svg/rouble.svg");
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: -8px;
@@ -903,7 +903,7 @@
   background-color: transparent;
   width: 18px;
   height: 36px;
-  background-image: url("/img/svg/arrow-icon.svg");
+  background-image: url("img/svg/arrow-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   -ms-flex-item-align: center;
@@ -1438,7 +1438,7 @@
   background-color: transparent;
   width: 18px;
   height: 36px;
-  background-image: url("/img/svg/arrow-icon.svg");
+  background-image: url("img/svg/arrow-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   -ms-flex-item-align: center;
@@ -1557,6 +1557,27 @@
 }
 
 .section-container {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, transparent));
+  background-image: -o-linear-gradient(left, #102654 50%, transparent 50%);
+  background-image: linear-gradient(to right, #102654 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+}
+
+.section-container::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  background-color: #74819c;
+}
+
+.section-container__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -1564,10 +1585,9 @@
 }
 
 .feedback {
-  background-color: #102654;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 66px 168px 66px 102px;
+  padding: 66px 168px 66px 0;
 }
 
 .feedback__header {
@@ -1662,8 +1682,7 @@
 .contacts {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 66px 38px 47px 120px;
-  border-top: 1px solid #74819c;
+  padding: 67px 0 47px 124px;
 }
 
 .contacts__header {
@@ -1674,6 +1693,7 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 33px;
+  margin-left: -4px;
 }
 
 .contacts__contacts-list {
@@ -1681,19 +1701,18 @@
   box-sizing: border-box;
   position: relative;
   padding: 0;
-  padding-left: 4px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
   justify-items: start;
   row-gap: 7px;
-  -webkit-column-gap: 59px;
-  -moz-column-gap: 59px;
-  column-gap: 59px;
+  -webkit-column-gap: 66px;
+  -moz-column-gap: 66px;
+  column-gap: 66px;
 }
 
 .contacts__contacts-list::before {
@@ -1702,6 +1721,7 @@
   width: 1px;
   bottom: 7px;
   top: 16px;
+  right: -7px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -1839,26 +1859,26 @@
 }
 
 .page-footer__social-link--vk {
-  background-image: url("/img/svg/vk-icon.svg");
+  background-image: url("img/svg/vk-icon.svg");
   background-position: 0 4px;
 }
 
 .page-footer__social-link--inst {
-  background-image: url("/img/svg/inst-icon.svg");
+  background-image: url("img/svg/inst-icon.svg");
 }
 
 .page-footer__social-link--fb {
-  background-image: url("/img/svg/fb-icon.svg");
+  background-image: url("img/svg/fb-icon.svg");
   width: 12px;
 }
 
 @media (min-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1199px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1199px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("/img/backgrounds/gym-video-dsk@2x.jpg");
+    background-image: url("img/backgrounds/gym-video-dsk@2x.jpg");
   }
 
   .passes::before {
-    background-image: url("/img/backgrounds/passes-weights-dsk@2x.png");
+    background-image: url("img/backgrounds/passes-weights-dsk@2x.png");
   }
 }
 
@@ -1994,7 +2014,7 @@
     align-self: end;
     width: 266px;
     height: 167px;
-    background-image: url("/img/backgrounds/gym-video-tbl.jpg");
+    background-image: url("img/backgrounds/gym-video-tbl.jpg");
   }
 
   .gym__play-button {
@@ -2011,7 +2031,7 @@
     right: 0;
     width: 349px;
     height: 450px;
-    background-image: url("/img/backgrounds/passes-weights-tbl.png");
+    background-image: url("img/backgrounds/passes-weights-tbl.png");
   }
 
   .passes__wrapper {
@@ -2328,11 +2348,22 @@
     grid-row: 2;
   }
 
+  .section-container::before {
+    display: none;
+  }
+
   .section-container {
+    background: none;
+  }
+
+  .section-container__wrapper {
     display: block;
+    margin: 0;
+    max-width: unset;
   }
 
   .feedback {
+    background-color: #102654;
     padding: 67px 162px 68px 132px;
   }
 
@@ -2350,24 +2381,29 @@
   }
 
   .contacts {
-    padding: 67px 66px 47px 129px;
-    border: none;
+    padding: 67px 66px 48px 133px;
   }
 
   .contacts__header {
     font-size: 42px;
     letter-spacing: 1.4px;
     margin-bottom: 28px;
-    margin-left: 4px;
+    margin-left: 0;
   }
 
   .contacts__contacts-list {
     -webkit-column-gap: 47px;
     -moz-column-gap: 47px;
     column-gap: 47px;
-    row-gap: 15px;
+    row-gap: 14px;
     -ms-grid-columns: 47% 1fr;
     grid-template-columns: 47% 1fr;
+  }
+
+  .contacts__contacts-list::before {
+    top: 15px;
+    right: 0;
+    bottom: 6px;
   }
 
   .contacts__contact-header {
@@ -2400,11 +2436,11 @@
 
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1199px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("/img/backgrounds/gym-video-tbl@2x.jpg");
+    background-image: url("img/backgrounds/gym-video-tbl@2x.jpg");
   }
 
   .passes::before {
-    background-image: url("/img/backgrounds/passes-weights-tbl@2x.png");
+    background-image: url("img/backgrounds/passes-weights-tbl@2x.png");
   }
 }
 
@@ -2502,7 +2538,7 @@
   }
 
   .gym__video-container {
-    background-image: url("/img/backgrounds/gym-video-mbl.jpg");
+    background-image: url("img/backgrounds/gym-video-mbl.jpg");
     -ms-grid-row: 5;
     grid-row: 5;
     height: 167px;
@@ -2930,7 +2966,7 @@
   }
 
   .contacts {
-    padding: 67px 11px 48px;
+    padding: 67px 15px 48px 15px;
   }
 
   .contacts__header {
@@ -3057,7 +3093,7 @@
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("/img/backgrounds/gym-video-mbl@2x.jpg");
+    background-image: url("img/backgrounds/gym-video-mbl@2x.jpg");
   }
 }
 

@@ -412,37 +412,39 @@
         </div>
       </section>
       <div class="section-container">
-        <section class="feedback">
-          <h2 class="feedback__header">Бесплатное занятие</h2>
-          <form action="https://echo.htmlacademy.ru" method="POST">
-            <label for="name-field" class="visually-hidden">Имя</label>
-            <input type="text" id="name-field" placeholder="Имя" name="name">
-            <label for="phone-field" class="visually-hidden">Телефон</label>
-            <input type="tel" id="phone-field" placeholder="Телефон" name="phone" pattern="[+][7][(][0-9]{3}[)][0-9]{7}">
-            <button type="submit">Отправить</button>
-          </form>
-        </section>
-        <section class="contacts">
-          <h2 class="contacts__header">Контакты</h2>
-            <ul class="contacts__contacts-list">
-              <li class="contacts__contact">
-                <h3 class="contacts__contact-header">Адрес:</h3>
-                <a class="contacts__contact-value">г. Омск, ул. 60 лет Октября, 7</a>
-              </li>
-              <li class="contacts__contact">
-                <h3 class="contacts__contact-header">Телефон:</h3>
-                <a class="contacts__contact-value hoverable" href="tel:88005555555">8-800-555-55-55</a>
-              </li>
-              <li class="contacts__contact contacts__contact--workhours">
-                <h3 class="contacts__contact-header">График работы:</h3>
-                <a class="contacts__contact-value">Пн-Вс: с 8:00 до 22:00</a>
-              </li>
-              <li class="contacts__contact">
-                <h3 class="contacts__contact-header">Email:</h3>
-                <a class="contacts__contact-value hoverable" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-              </li>
-            </ul>
-        </section>
+        <div class="section-container__wrapper">
+          <section class="feedback">
+            <h2 class="feedback__header">Бесплатное занятие</h2>
+            <form action="https://echo.htmlacademy.ru" method="POST">
+              <label for="name-field" class="visually-hidden">Имя</label>
+              <input type="text" id="name-field" placeholder="Имя" name="name">
+              <label for="phone-field" class="visually-hidden">Телефон</label>
+              <input type="tel" id="phone-field" placeholder="Телефон" name="phone" pattern="[+][7][(][0-9]{3}[)][0-9]{7}">
+              <button type="submit">Отправить</button>
+            </form>
+          </section>
+          <section class="contacts">
+            <h2 class="contacts__header">Контакты</h2>
+              <ul class="contacts__contacts-list">
+                <li class="contacts__contact">
+                  <h3 class="contacts__contact-header">Адрес:</h3>
+                  <a class="contacts__contact-value">г. Омск, ул. 60 лет Октября, 7</a>
+                </li>
+                <li class="contacts__contact">
+                  <h3 class="contacts__contact-header">Телефон:</h3>
+                  <a class="contacts__contact-value hoverable" href="tel:88005555555">8-800-555-55-55</a>
+                </li>
+                <li class="contacts__contact contacts__contact--workhours">
+                  <h3 class="contacts__contact-header">График работы:</h3>
+                  <a class="contacts__contact-value">Пн-Вс: с 8:00 до 22:00</a>
+                </li>
+                <li class="contacts__contact">
+                  <h3 class="contacts__contact-header">Email:</h3>
+                  <a class="contacts__contact-value hoverable" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </li>
+              </ul>
+          </section>
+        </div>
       </div>
     </main>
     <footer class="page-footer container">

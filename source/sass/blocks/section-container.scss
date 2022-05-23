@@ -1,8 +1,37 @@
 .section-container {
+  background-image: linear-gradient(to right, $blue-text 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    background-color: $gray-input;
+
+    @media (max-width: $tbl-breakpoint) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tbl-breakpoint) {
+    background: none;
+  }
+}
+
+.section-container__wrapper {
+  max-width: $dsk-wrapper-width;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   @media (max-width: $tbl-breakpoint) {
     display: block;
+    margin: 0;
+    max-width: unset;
   }
 }

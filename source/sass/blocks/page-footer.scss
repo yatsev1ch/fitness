@@ -178,7 +178,7 @@
 
 
   &--vk {
-    background-image: url("/img/svg/vk-icon.svg");
+    background-image: url("img/svg/vk-icon.svg");
     background-position: 0 4px;
 
     @media (max-width: $mbl-breakpoint) {
@@ -187,11 +187,11 @@
   }
 
   &--inst {
-    background-image: url("/img/svg/inst-icon.svg");
+    background-image: url("img/svg/inst-icon.svg");
   }
 
   &--fb {
-    background-image: url("/img/svg/fb-icon.svg");
+    background-image: url("img/svg/fb-icon.svg");
     width: 12px;
 
     @media (max-width: $mbl-breakpoint) {
