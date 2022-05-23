@@ -431,7 +431,7 @@
   width: 364px;
   height: 228px;
   align-self: start;
-  background-image: url("img/backgrounds/gym-video-dsk.jpg");
+  background-image: url("../img/backgrounds/gym-video-dsk.jpg");
   background-color: #14367ae3;
   background-repeat: no-repeat;
   background-size: cover;
@@ -458,7 +458,7 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-image: url("img/svg/video-button.svg");
+  background-image: url("../img/svg/video-button.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -484,7 +484,7 @@
   position: absolute;
   bottom: -151px;
   right: 0;
-  background-image: url("img/backgrounds/passes-weights-dsk.png");
+  background-image: url("../img/backgrounds/passes-weights-dsk.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 288px;
@@ -607,7 +607,7 @@
   vertical-align: middle;
   height: 42px;
   width: 30px;
-  background-image: url("img/svg/rouble.svg");
+  background-image: url("../img/svg/rouble.svg");
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: -8px;
@@ -903,7 +903,7 @@
   background-color: transparent;
   width: 18px;
   height: 36px;
-  background-image: url("img/svg/arrow-icon.svg");
+  background-image: url("../img/svg/arrow-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   -ms-flex-item-align: center;
@@ -1438,7 +1438,7 @@
   background-color: transparent;
   width: 18px;
   height: 36px;
-  background-image: url("img/svg/arrow-icon.svg");
+  background-image: url("../img/svg/arrow-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   -ms-flex-item-align: center;
@@ -1859,26 +1859,26 @@
 }
 
 .page-footer__social-link--vk {
-  background-image: url("img/svg/vk-icon.svg");
+  background-image: url("../img/svg/vk-icon.svg");
   background-position: 0 4px;
 }
 
 .page-footer__social-link--inst {
-  background-image: url("img/svg/inst-icon.svg");
+  background-image: url("../img/svg/inst-icon.svg");
 }
 
 .page-footer__social-link--fb {
-  background-image: url("img/svg/fb-icon.svg");
+  background-image: url("../img/svg/fb-icon.svg");
   width: 12px;
 }
 
 @media (min-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1199px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1199px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("img/backgrounds/gym-video-dsk@2x.jpg");
+    background-image: url("../img/backgrounds/gym-video-dsk@2x.jpg");
   }
 
   .passes::before {
-    background-image: url("img/backgrounds/passes-weights-dsk@2x.png");
+    background-image: url("../img/backgrounds/passes-weights-dsk@2x.png");
   }
 }
 
@@ -2014,7 +2014,7 @@
     align-self: end;
     width: 266px;
     height: 167px;
-    background-image: url("img/backgrounds/gym-video-tbl.jpg");
+    background-image: url("../img/backgrounds/gym-video-tbl.jpg");
   }
 
   .gym__play-button {
@@ -2031,7 +2031,7 @@
     right: 0;
     width: 349px;
     height: 450px;
-    background-image: url("img/backgrounds/passes-weights-tbl.png");
+    background-image: url("../img/backgrounds/passes-weights-tbl.png");
   }
 
   .passes__wrapper {
@@ -2436,11 +2436,11 @@
 
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1199px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("img/backgrounds/gym-video-tbl@2x.jpg");
+    background-image: url("../img/backgrounds/gym-video-tbl@2x.jpg");
   }
 
   .passes::before {
-    background-image: url("img/backgrounds/passes-weights-tbl@2x.png");
+    background-image: url("../img/backgrounds/passes-weights-tbl@2x.png");
   }
 }
 
@@ -2538,7 +2538,7 @@
   }
 
   .gym__video-container {
-    background-image: url("img/backgrounds/gym-video-mbl.jpg");
+    background-image: url("../img/backgrounds/gym-video-mbl.jpg");
     -ms-grid-row: 5;
     grid-row: 5;
     height: 167px;
@@ -3093,7 +3093,7 @@
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .gym__video-container {
-    background-image: url("img/backgrounds/gym-video-mbl@2x.jpg");
+    background-image: url("../img/backgrounds/gym-video-mbl@2x.jpg");
   }
 }
 

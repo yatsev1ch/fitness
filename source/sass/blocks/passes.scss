@@ -17,14 +17,14 @@
     position: absolute;
     bottom: -151px;
     right: 0;
-    background-image: url("img/backgrounds/passes-weights-dsk.png");
+    background-image: url("../img/backgrounds/passes-weights-dsk.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 288px;
     height: 495px;
 
     @media (min-width: $tbl-breakpoint) and (min-resolution: 2dppx) {
-      background-image: url("img/backgrounds/passes-weights-dsk@2x.png");
+      background-image: url("../img/backgrounds/passes-weights-dsk@2x.png");
     }
 
     @media (max-width: $tbl-breakpoint) {
@@ -32,10 +32,10 @@
       right: 0;
       width: 349px;
       height: 450px;
-      background-image: url("img/backgrounds/passes-weights-tbl.png");
+      background-image: url("../img/backgrounds/passes-weights-tbl.png");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("img/backgrounds/passes-weights-tbl@2x.png");
+        background-image: url("../img/backgrounds/passes-weights-tbl@2x.png");
       }
     }
 
@@ -214,7 +214,7 @@
     vertical-align: middle;
     height: 42px;
     width: 30px;
-    background-image: url("img/svg/rouble.svg");
+    background-image: url("../img/svg/rouble.svg");
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -8px;
