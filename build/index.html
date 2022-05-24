@@ -7,8 +7,8 @@
     <title>Фитнес центр</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicons/180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/favicons/180x180.png">
     <link rel="preload" href="fonts/bebas-neue.woff2" as="font">
     <link rel="preload" href="fonts/roboto-condensed.woff2" as="font">
   </head>
@@ -73,19 +73,19 @@
             <a href="#" data-type="year" class="passes__toggle">12 месяцев</a>
           </div>
           <ul class="passes__passes-list">
-            <li class="passes__pass">
+            <li class="passes__pass passes__pass--trainer">
               <h3 class="passes__name">С тренером</h3>
               <p>12 занятий</p>
               <span data-type="trainer" data-price="5000">5000&nbsp;</span>
               <a href="#" class="passes__button">купить абонемент</a>
             </li>
-            <li class="passes__pass passes__pass--active">
+            <li class="passes__pass passes__pass--day">
               <h3 class="passes__name">Дневной</h3>
               <p>с 8:00 до 17:00</p>
               <span data-type="day" data-price="1700">1700&nbsp;</span>
               <a href="#" class="passes__button">купить абонемент</a>
             </li>
-            <li class="passes__pass">
+            <li class="passes__pass passes__pass--full-day">
               <h3 class="passes__name">Полный день</h3>
               <p>с 8:00 до 22:00</p>
               <span data-type="fullDay" data-price="2700">2700&nbsp;</span>
@@ -419,7 +419,7 @@
               <label for="name-field" class="visually-hidden">Имя</label>
               <input type="text" id="name-field" placeholder="Имя" name="name">
               <label for="phone-field" class="visually-hidden">Телефон</label>
-              <input type="tel" id="phone-field" placeholder="Телефон" name="phone" pattern="[+][7][(][0-9]{3}[)][0-9]{7}">
+              <input type="tel" id="phone-field" placeholder="Телефон" name="phone" pattern="[+][7][(][0-9]{3}[)][0-9]{7}" required>
               <button type="submit">Отправить</button>
             </form>
           </section>
@@ -475,13 +475,13 @@
         </nav>
         <ul class="page-footer__socials">
           <li class="page-footer__social">
-            <a href="https://fb.com" class="page-footer__social-link page-footer__social-link--fb hoverable">фейсбук</a>
+            <a href="https://vk.com" class="page-footer__social-link page-footer__social-link--vk hoverable">вк</a>
           </li>
           <li class="page-footer__social">
             <a href="https://instagram.com" class="page-footer__social-link page-footer__social-link--inst hoverable">инстаграм</a>
           </li>
           <li class="page-footer__social">
-            <a href="https://vk.com" class="page-footer__social-link page-footer__social-link--vk hoverable">вк</a>
+            <a href="https://fb.com" class="page-footer__social-link page-footer__social-link--fb hoverable">фейсбук</a>
           </li>
         </ul>
       </div>

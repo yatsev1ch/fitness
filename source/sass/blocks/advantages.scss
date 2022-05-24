@@ -15,10 +15,10 @@
   box-sizing: border-box;
   max-width: $dsk-wrapper-width - 122px;
   margin: 0 auto;
-  padding: 117px 0 20px;
+  padding: 117px 0 98px;
 
   @media (max-width: $tbl-breakpoint) {
-    padding: 97px 0 86px;
+    padding: 97px 0 94px;
   }
 
   @media (max-width: $mbl-breakpoint) {
@@ -38,7 +38,7 @@
 
   @media (max-width: $tbl-breakpoint) {
     font-size: 42px;
-    margin: 0 0 49px 2px;
+    margin: 0 0 50px 2px;
     letter-spacing: 1.6px;
   }
 
@@ -51,24 +51,59 @@
 
 .advantages__advantages-list {
   box-sizing: border-box;
+  position: relative;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  row-gap: 74px;
-  margin-bottom: -58px;
-  align-content: start;
-  align-items: start;
+  row-gap: 152px;
 
   @media (max-width: $tbl-breakpoint) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
+    justify-items: center;
+    row-gap: 43px;
     column-gap: 30px;
-    margin-bottom: 0;
+    margin: 0 auto;
   }
 
   @media (max-width: $mbl-breakpoint) {
     grid-template-columns: 1fr;
     row-gap: 38px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -78px;
+    left: 0;
+    right: 0;
+    max-width: 340px;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    align-self: end;
+    height: 2px;
+    background-color: $pink-active-20;
+
+    @media (max-width: $tbl-breakpoint) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -78px;
+    left: 0;
+    right: -2px;
+    max-width: 340px;
+    grid-column: 3;
+    grid-row: 1 / 2;
+    align-self: end;
+    height: 2px;
+    background-color: $pink-active-20;
+
+    @media (max-width: $tbl-breakpoint) {
+      display: none;
+    }
   }
 }
 
@@ -76,13 +111,12 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: auto 1fr;
-  align-content: start;
   column-gap: 30px;
-  min-height: 162px;
-  padding-bottom: 8px;
+  min-width: 340px;
 
   @media (max-width: $tbl-breakpoint) {
-    min-height: unset;
+    max-width: 340px;
+    min-width: unset;
   }
 
   @media (max-width: $mbl-breakpoint) {
@@ -91,24 +125,24 @@
   }
 
   &--main {
-    margin-top: 7px;
     padding: 54px 30px 58px;
-    max-width: 240px;
+    min-width: 240px;
     grid-column: 2;
-    grid-row: 1 / 4;
+    grid-row-start: 1;
+    grid-row-end: span 2;
     margin-left: 60px;
     margin-right: 60px;
     background-color: $blue-border;
     grid-template-columns: 1fr;
+    align-self: center;
 
     @media (max-width: $tbl-breakpoint) {
       grid-column: 1 / -1;
       grid-row: 2;
       justify-self: center;
-      min-width: 442px;
+      max-width: 442px;
       margin: 0;
-      margin-top: 5px;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
       padding: 33px 130px 38px;
     }
 
@@ -122,28 +156,21 @@
     }
   }
 
-  &--square,
-  &--parking {
-    border-bottom: 2px solid $pink-active-20;
-
+  &--square {
     @media (max-width: $tbl-breakpoint) {
-      border: none;
+      min-width: unset;
     }
   }
 
-  &--square {
+  &--square .advantages__advantage-info {
     padding-left: 26px;
-    max-width: 340px;
-    min-width: 340px;
 
     @media (max-width: $tbl-breakpoint) {
-      max-width: unset;
-      min-width: unset;
       padding-left: 0;
     }
   }
 
-  &--comfort {
+  &--comfort .advantages__advantage-info {
     padding-left: 19px;
 
     @media (max-width: $tbl-breakpoint) {
@@ -161,6 +188,7 @@
 }
 
 .advantages__advantage-info {
+  box-sizing: border-box;
   grid-row: 1 / 4;
   grid-column: 1;
   font-size: 71px;
@@ -172,6 +200,7 @@
   background-image: linear-gradient(155deg, $pink-active, $blue-gradient 70%);
   background-repeat: no-repeat;
   background-clip: text;
+  justify-self: end;
 
   @media (max-width: $tbl-breakpoint) {
     font-size: 58px;
@@ -181,6 +210,7 @@
     grid-row: 1;
     text-align: center;
     margin-bottom: 14px;
+    justify-self: center;
     background-image: linear-gradient(162deg, $pink-active, $blue-gradient 78%);
   }
 
@@ -215,7 +245,7 @@
   @media (max-width: $tbl-breakpoint) {
     font-size: 20px;
     line-height: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
 
   @media (max-width: $mbl-breakpoint) {

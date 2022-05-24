@@ -126,14 +126,14 @@
   box-sizing: border-box;
   position: relative;
   box-shadow: $trainer-shadow;
-  padding: 59px 62px 56px;
+  padding: 59px 62px 57px;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   background-color: $blue-border;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 28px;
-  touch-action: pan-x;
+  align-content: start;
 
   @media (max-width: $tbl-breakpoint) {
     padding: 59px 65px 56px;

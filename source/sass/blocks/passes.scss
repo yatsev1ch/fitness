@@ -170,11 +170,13 @@
   align-self: stretch;
   padding: 0;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row dense;
   gap: 40px;
 
   @media (max-width: $tbl-breakpoint) {
     grid-template-columns: repeat(auto-fit, 442px);
     justify-content: space-around;
+    grid-auto-flow: unset;
   }
 
   @media (max-width: $mbl-breakpoint) {
@@ -279,6 +281,30 @@
     min-height: 384px;
     max-width: 442px;
     justify-self: center;
+  }
+
+  &--trainer {
+    grid-column: 1;
+
+    @media (max-width: $tbl-breakpoint) {
+      grid-column: unset;
+    }
+  }
+
+  &--day {
+    grid-column: 2;
+
+    @media (max-width: $tbl-breakpoint) {
+      grid-column: unset;
+    }
+  }
+
+  &--full-day {
+    grid-column: 3;
+
+    @media (max-width: $tbl-breakpoint) {
+      grid-column: unset;
+    }
   }
 
   &:hover,
