@@ -232,6 +232,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  align-self: stretch;
   grid-column: 2;
   grid-row: 1 / 5;
   margin: -42px 0 -45px 0;
@@ -247,5 +248,7 @@
 
 .promotions__image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   margin: 0;
 }
