@@ -73,22 +73,58 @@
             <a href="#" data-type="year" class="passes__toggle">12 месяцев</a>
           </div>
           <ul class="passes__passes-list">
-            <li class="passes__pass passes__pass--trainer">
+            <li class="passes__pass passes__pass--month">
               <h3 class="passes__name">С тренером</h3>
               <p>12 занятий</p>
-              <span data-type="trainer" data-price="5000">5000&nbsp;</span>
+              <span data-price="5000">5000&nbsp;</span>
               <a href="#" class="passes__button">купить абонемент</a>
             </li>
-            <li class="passes__pass passes__pass--day">
+            <li class="passes__pass passes__pass--month">
               <h3 class="passes__name">Дневной</h3>
               <p>с 8:00 до 17:00</p>
-              <span data-type="day" data-price="1700">1700&nbsp;</span>
+              <span data-price="1700">1700&nbsp;</span>
               <a href="#" class="passes__button">купить абонемент</a>
             </li>
-            <li class="passes__pass passes__pass--full-day">
+            <li class="passes__pass passes__pass--month">
               <h3 class="passes__name">Полный день</h3>
               <p>с 8:00 до 22:00</p>
-              <span data-type="fullDay" data-price="2700">2700&nbsp;</span>
+              <span data-price="2700">2700&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--halfYear passes__pass--hidden">
+              <h3 class="passes__name">С тренером</h3>
+              <p>12 занятий</p>
+              <span data-price="15000">15000&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--halfYear passes__pass--hidden">
+              <h3 class="passes__name">Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span data-price="9900">9900&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--halfYear passes__pass--hidden">
+              <h3 class="passes__name">Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <span data-price="12300">12300&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--year passes__pass--hidden">
+              <h3 class="passes__name">С тренером</h3>
+              <p>12 занятий</p>
+              <span data-price="25000">25000&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--year passes__pass--hidden">
+              <h3 class="passes__name">Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span data-price="19000">19000&nbsp;</span>
+              <a href="#" class="passes__button">купить абонемент</a>
+            </li>
+            <li class="passes__pass passes__pass--year passes__pass--hidden">
+              <h3 class="passes__name">Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <span data-price="59600">59600&nbsp;</span>
               <a href="#" class="passes__button">купить абонемент</a>
             </li>
           </ul>
@@ -417,7 +453,7 @@
             <h2 class="feedback__header">Бесплатное занятие</h2>
             <form action="https://echo.htmlacademy.ru" method="POST">
               <label for="name-field" class="visually-hidden">Имя</label>
-              <input type="text" id="name-field" placeholder="Имя" name="name">
+              <input type="text" id="name-field" placeholder="Имя" name="name" required>
               <label for="phone-field" class="visually-hidden">Телефон</label>
               <input type="tel" id="phone-field" placeholder="Телефон" name="phone" pattern="[+][7][(][0-9]{3}[)][0-9]{7}" required>
               <button type="submit">Отправить</button>

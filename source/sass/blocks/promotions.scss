@@ -77,6 +77,14 @@
   border-image: linear-gradient(160deg, $pink-active, $blue-gradient) 1;
   grid-column: 2;
 
+  &:nth-child(n + 4) {
+    grid-column: 1 / -1;
+
+    @media (max-width: $tbl-breakpoint) {
+      grid-column: unset;
+    }
+  }
+
   @media (max-width: $tbl-breakpoint) {
     grid-column: unset;
     padding: 19px 40px 28px 29px;

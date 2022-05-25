@@ -283,28 +283,8 @@
     justify-self: center;
   }
 
-  &--trainer {
-    grid-column: 1;
-
-    @media (max-width: $tbl-breakpoint) {
-      grid-column: unset;
-    }
-  }
-
-  &--day {
-    grid-column: 2;
-
-    @media (max-width: $tbl-breakpoint) {
-      grid-column: unset;
-    }
-  }
-
-  &--full-day {
-    grid-column: 3;
-
-    @media (max-width: $tbl-breakpoint) {
-      grid-column: unset;
-    }
+  &--hidden {
+    display: none;
   }
 
   &:hover,

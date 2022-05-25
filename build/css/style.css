@@ -653,19 +653,8 @@
   flex-direction: column;
 }
 
-.passes__pass--trainer {
-  -ms-grid-column: 1;
-  grid-column: 1;
-}
-
-.passes__pass--day {
-  -ms-grid-column: 2;
-  grid-column: 2;
-}
-
-.passes__pass--full-day {
-  -ms-grid-column: 3;
-  grid-column: 3;
+.passes__pass--hidden {
+  display: none;
 }
 
 .passes__pass:hover,
@@ -1341,6 +1330,10 @@
   grid-column: 2;
 }
 
+.promotions__promotion:nth-child(n + 4) {
+  grid-column: 1 / -1;
+}
+
 .promotions__promotion--main {
   -ms-grid-row-span: 2;
   grid-row-end: span 2;
@@ -1836,7 +1829,7 @@
 .page-footer__logo-container {
   display: block;
   margin-left: -1px;
-  margin-right: 86px;
+  margin-right: 36px;
   margin-top: 3px;
 }
 
@@ -1898,7 +1891,8 @@
   justify-content: flex-end;
   padding: 0;
   margin: 0;
-  width: 15%;
+  width: 125px;
+  min-width: 125px;
   -webkit-column-gap: 25px;
   -moz-column-gap: 25px;
   column-gap: 25px;
@@ -2147,18 +2141,6 @@
     padding: 62px 10px 10px;
   }
 
-  .passes__pass--trainer {
-    grid-column: unset;
-  }
-
-  .passes__pass--day {
-    grid-column: unset;
-  }
-
-  .passes__pass--full-day {
-    grid-column: unset;
-  }
-
   .passes__pass:hover,
   .passes__pass:focus-within {
     padding-top: 56px;
@@ -2385,6 +2367,10 @@
     grid-auto-flow: unset;
   }
 
+  .promotions__promotion:nth-child(n + 4) {
+    grid-column: unset;
+  }
+
   .promotions__promotion {
     grid-column: unset;
     padding: 19px 40px 28px 29px;
@@ -2508,7 +2494,7 @@
   }
 
   .page-footer__logo-container {
-    margin-right: 20px;
+    margin-right: 33px;
   }
 
   .page-footer__links-list {
@@ -2520,6 +2506,8 @@
 
   .page-footer__socials {
     gap: 20px;
+    min-width: 115px;
+    width: 115px;
   }
 }
 
@@ -3178,6 +3166,7 @@
 
   .page-footer__socials {
     gap: 32px;
+    min-width: unset;
     width: 100%;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
