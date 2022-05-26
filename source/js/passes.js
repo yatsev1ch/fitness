@@ -1,7 +1,7 @@
 const togglesContainer = document.querySelector('.passes__toggles');
 const passesContainer = document.querySelector('.passes__passes-list');
 const toggles = togglesContainer.querySelectorAll('.passes__toggle');
-const priceElements = passesContainer.querySelectorAll('.passes__pass');
+const passesGroups = passesContainer.querySelectorAll('.passes__toggle-container');
 
 const changeToggleState = (selectedToggle) => {
   toggles.forEach((toggle) => {
@@ -15,11 +15,11 @@ const changeToggleState = (selectedToggle) => {
 
 const changePriceWith = (toggle) => {
   const toggleType = toggle.dataset.type;
-  priceElements.forEach((priceElement) => {
-    if (priceElement.classList.contains(`passes__pass--${toggleType}`)) {
-      priceElement.classList.remove('passes__pass--hidden');
+  passesGroups.forEach((passesGroup) => {
+    if (passesGroup.classList.contains(`passes__toggle-container--${toggleType}`)) {
+      passesGroup.classList.remove('passes__toggle-container--hidden');
     } else {
-      priceElement.classList.add('passes__pass--hidden');
+      passesGroup.classList.add('passes__toggle-container--hidden');
     }
   });
 };
